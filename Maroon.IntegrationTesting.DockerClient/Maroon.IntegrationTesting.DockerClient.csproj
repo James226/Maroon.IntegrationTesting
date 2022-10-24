@@ -4,6 +4,8 @@
         <TargetFramework>net6.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
+        <Authors>James226</Authors>
+        <RepositoryUrl>https://github.com/james226/Maroon.IntegrationTesting</RepositoryUrl>
     </PropertyGroup>
 
     <ItemGroup>

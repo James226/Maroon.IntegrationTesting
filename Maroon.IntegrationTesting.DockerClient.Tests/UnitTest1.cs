@@ -19,12 +19,6 @@ public class Tests
     [Test]
     public void ThenTheResponseIsSuccessful()
     {
-        Assert.That(_response.StatusCode, Is.EqualTo(HttpStatusCode.OK));
-    }
-
-    [Test]
-    public void foo()
-    {
-        Assert.That(true, Is.False);
+        Assert.That(_response!.StatusCode, Is.EqualTo(HttpStatusCode.OK));
     }
 }

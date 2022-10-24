@@ -30,14 +30,9 @@ await Host.CreateDefaultBuilder(args)
                     //sending it back in the response
                     context.Response.ContentType = MediaTypeNames.Text.Plain;
                     await context.Response.WriteAsync(content);
+                    return;
                 }
-                else
-                {
-                    //Return 404 for any other endpoint
-                    context.Response.StatusCode = StatusCodes.Status404NotFound;
-                    await context.Response.WriteAsync(
-                        $"WRONG ENDPOINT: {context.Request.Path.ToString()}. Use POST request to /api/echo instead");
-                }
+                context.Response.StatusCode = StatusCodes.Status404NotFound;
             });
         })
         .ConfigureServices(services =>
